@@ -20,26 +20,57 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('YouTube Two Coders'),
           centerTitle: true,
+          leading: Icon(Icons.camera),
+          actions: <Widget>[
+            Icon(Icons.chat),
+            SizedBox(height: 10,)
+          ],
         ),
-        drawer: Drawer(
-          child: Text('SideBar'),
-        ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 50,),
-              Text('1'),
-              Text('2'),
-              Text('3'),
-              Text('4'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text('1'),
-                  Text('2'),
-                  Text('3'),
-                  Text('4'),
-                ],
+              Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 25,
+                          child: Image.network('https://image.tmdb.org/t/p/original/tUpNOTyHtamAt8GlEXsBKvbaDqu.jpg',
+                          height: 40, fit: BoxFit.cover,
+                          ),
+
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text('Queen', style: TextStyle(fontWeight: FontWeight.bold, ),),
+                            Text('South Korea')
+                          ],
+                        )
+                      ],
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top:10),
+                      child: Image.network('https://static2.srcdn.com/wordpress/wp-content/uploads/2018/02/Jake-Sully-and-Neytiti-in-Avatar.jpg'),
+
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top:10),
+                      child: Row(
+
+                        children: <Widget>[
+                          Icon(Icons.thumb_up),
+                          SizedBox(width: 10,),
+                          Icon(Icons.comment),
+                          SizedBox(width: 10,),
+                          Icon(Icons.share)
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
