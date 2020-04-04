@@ -68,7 +68,8 @@ class _HomePageState extends State<HomePage> {
                           Icon(Icons.share)
                         ],
                       ),
-                    )
+                    ),
+                    Divider(color: Colors.black,)
                   ],
                 ),
               )
