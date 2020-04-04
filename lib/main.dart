@@ -12,19 +12,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var _text  = 'Heloo work cool ass!';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text(_text),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            setState(() {
-              _text = 'Youtube is Mine';
-            });
-          },
-        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('1'),
+              Text('2'),
+              Text('3'),
+              Text('4'),
+            ],
+          ),
+        )
       ),
     );
   }
