@@ -17,6 +17,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('YouTube Two Coders'),
+          centerTitle: true,
+        ),
+        drawer: Drawer(
+          child: Text('SideBar'),
+        ),
         body: Center(
           child: Column(
             children: <Widget>[
