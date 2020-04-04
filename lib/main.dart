@@ -4,13 +4,21 @@ void main() {
   runApp(HomePage());
 }
 
-class HomePage extends StatelessWidget {
+
+// stateful
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text('Heloo workidass!'),
+        body: Text('Heloo work cool ass!'),
       ),
     );
   }
 }
+
